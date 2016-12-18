@@ -22,10 +22,10 @@ public class SetUpNetworking {
 
 
     public SetUpNetworking() {
-        setUpNetworking();
+        establishConnection();
     }
 
-    public void setUpNetworking() {
+    public void establishConnection() {
         try {
             Socket sock = new Socket("127.0.0.1", 5000);
             InputStreamReader streamReader = new InputStreamReader(sock.getInputStream());

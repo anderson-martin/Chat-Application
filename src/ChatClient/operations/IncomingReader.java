@@ -25,6 +25,7 @@ public class IncomingReader implements Runnable {
     }
 
     public void run() {
+        //reading incoming messages from server and updating gui
         String message;
         try {
             while ((message = reader.readLine()) != null) {

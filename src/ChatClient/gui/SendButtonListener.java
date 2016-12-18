@@ -26,6 +26,7 @@ public class SendButtonListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ev) {
+        //writing the outgoing text to the server bu means of PrintWriter
         try {
             writer.println(outgoing.getText());
             writer.flush();
