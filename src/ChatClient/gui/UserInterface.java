@@ -49,12 +49,12 @@ public class UserInterface {
         mainPanel.add(sendButton);
         frame.getContentPane().add(BorderLayout.CENTER, mainPanel);
         
-        //establishing connection with server and input & output streams
+        //establishing connection with server and using input & output streams
         SetUpNetworking networkSetup = new SetUpNetworking();
         reader = networkSetup.getReader();
         writer = networkSetup.getWriter();
 
-        //writing the outgoing text to the server bu means of PrintWriter
+        //writing user's text to the server 
         sendButton.addActionListener(new SendButtonListener(writer, outgoing));
         
         //reading incoming messages from server and updating gui
